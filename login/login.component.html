@@ -1,0 +1,42 @@
+<div class="login-container slide-in">
+  <h1>Login</h1>
+  <form (ngSubmit)="login()" #loginForm="ngForm" class="login-form">
+    <!-- Username input -->
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+        required
+      />
+    </div>
+
+    <!-- Password input -->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <div class="input-group">
+        <input
+          type="{{ showPassword ? 'text' : 'password' }}"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+        <div class="input-group-append">
+          <button
+            type="button"
+            (click)="togglePasswordVisibility()"
+            class="password-toggle-btn"
+          >
+            Show/Hide
+          </button>
+        </div>
+      </div>
+    </div>
+<br>
+    <!-- Submit button -->
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  </form>
+</div>

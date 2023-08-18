@@ -1,0 +1,82 @@
+/* Add custom styles to the login form */
+.login-container {
+  max-width: 400px;
+  /* margin: 0 auto; */
+  padding: 20px;
+  top:500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  /* display: flex; */
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  /* min-height: 100vh; */
+}
+
+.login-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  font-weight: bold;
+}
+
+.login-form input[type="text"]
+{
+  width: 94%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form input[type="password"]
+{
+  width: 94%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.password-toggle-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.password-toggle-btn:hover {
+  color: #007bff;
+}
+
+/* Add animation effects */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+}
